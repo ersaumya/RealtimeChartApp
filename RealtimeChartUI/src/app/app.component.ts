@@ -39,6 +39,7 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.signalrService.startConnection();
     this.signalrService.addTransferChartDataListener();
+    this.signalrService.addBroadcastChartDataListener();
     this.startHttpRequest();
   }
 
@@ -46,5 +47,10 @@ export class AppComponent implements OnInit {
     this.http.get('http://localhost:5000/api/chart').subscribe((res) => {
       console.log(res);
     });
+  };
+
+  public chartClicked = (event) => {
+    console.log(event);
+    this.signalrService.broadcastChartData();
   };
 }
