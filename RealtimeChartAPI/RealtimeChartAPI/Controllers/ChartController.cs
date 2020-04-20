@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SignalR;
+using RealtimeChartAPI.DataStorage;
 using RealtimeChartAPI.HubConfig;
 using RealtimeChartAPI.TimerFeatures;
 
